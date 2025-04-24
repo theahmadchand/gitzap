@@ -1,0 +1,38 @@
+{
+  "name": "gitzap",
+  "version": "0.0.1",
+  "description": "⚡️ Supercharge your Git workflow with time-saving shorthand commands and branch automation.",
+  "author": "Ahmad Chand",
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/theahmadchand/gitzap#readme",
+  "bugs": {
+    "url": "https://github.com/theahmadchand/gitzap/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theahmadchand/gitzap.git"
+  },
+  "keywords": [
+    "git",
+    "cli",
+    "developer-tools",
+    "productivity",
+    "aliases",
+    "workflow",
+    "bash",
+    "zsh"
+  ],
+  "files": [
+    "bin",
+    "scripts",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "index.js",
+  "bin": {
+    "gitzap": "./scripts/gitzap.js"
+  },
+  "scripts": {
+    "postinstall": "node ./bin/install.js"
+  }
+}

@@ -23,7 +23,7 @@ fs.copyFileSync(path.join(__dirname, "../scripts/gitzap.js"), path.join(installD
 const profileContent = fs.readFileSync(profile, "utf8");
 const pathExport = `\nexport PATH=\"$PATH:${installDir}\"\n`;
 if (!profileContent.includes(installDir)) {
-  fs.appendFileSync(profile, `\n# GitZap Path\n${pathExport}`);
+  fs.appendFileSync(profile, `\n# Gitzap Path\n${pathExport}`);
   console.log(`✅ Updated PATH in ${profile}`);
 
   try {
@@ -33,7 +33,7 @@ if (!profileContent.includes(installDir)) {
     console.log(`⚠️  Could not automatically source ${profile}. Please run: source ${profile}`);
   }
 } else {
-  console.log(`✅ GitZap PATH already exists in ${profile}`);
+  console.log(`✅ Gitzap PATH already exists in ${profile}`);
 }
 
 console.log(`✨ Done! You can now run: gitzap create-branch or gitzap prune-branches`);

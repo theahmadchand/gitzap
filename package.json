@@ -32,7 +32,14 @@
   "bin": {
     "gitzap": "./scripts/gitzap.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "postinstall": "node ./bin/install.js"
+    "postinstall": "node ./bin/install.js",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "semantic-release": "24.2.3"
   }
 }

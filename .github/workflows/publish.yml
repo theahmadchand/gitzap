@@ -1,8 +1,9 @@
 name: Publish NPM Package
 
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - "v*"
 
 jobs:
   publish:
@@ -17,10 +18,10 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install dependencies
+      - name: Run npm ci
         run: npm ci
 
-      - name: Verify npm package integrity
+      - name: Run npm audit signatures
         run: npm audit signatures
 
       - name: Publish to NPM

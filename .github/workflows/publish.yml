@@ -21,10 +21,10 @@ jobs:
           registry-url: "https://registry.npmjs.org"
 
       - name: Setup pnpm
-        run: npm intall -g pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies
-        run: pnpm intall
+        run: pnpm install
 
       - name: Check version
         id: check
